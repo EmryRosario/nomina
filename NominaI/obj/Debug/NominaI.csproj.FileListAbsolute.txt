@@ -1,0 +1,14 @@
+c:\users\hp\documents\visual studio 2013\Projects\NominaI\NominaI\bin\Debug\NominaI.exe.config
+c:\users\hp\documents\visual studio 2013\Projects\NominaI\NominaI\bin\Debug\NominaI.exe
+c:\users\hp\documents\visual studio 2013\Projects\NominaI\NominaI\bin\Debug\NominaI.pdb
+c:\users\hp\documents\visual studio 2013\Projects\NominaI\NominaI\obj\Debug\NominaI.csprojResolveAssemblyReference.cache
+c:\users\hp\documents\visual studio 2013\Projects\NominaI\NominaI\obj\Debug\NominaI.Properties.Resources.resources
+c:\users\hp\documents\visual studio 2013\Projects\NominaI\NominaI\obj\Debug\NominaI.csproj.GenerateResource.Cache
+c:\users\hp\documents\visual studio 2013\Projects\NominaI\NominaI\obj\Debug\NominaI.exe
+c:\users\hp\documents\visual studio 2013\Projects\NominaI\NominaI\obj\Debug\NominaI.pdb
+c:\users\hp\documents\visual studio 2013\Projects\NominaI\NominaI\obj\Debug\NominaI.Login.resources
+C:\Users\HP\Documents\Visual Studio 2013\Projects\NominaI\NominaI\bin\Debug\EntityFramework.dll
+C:\Users\HP\Documents\Visual Studio 2013\Projects\NominaI\NominaI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\Documents\Visual Studio 2013\Projects\NominaI\NominaI\bin\Debug\EntityFramework.xml
+C:\Users\HP\Documents\Visual Studio 2013\Projects\NominaI\NominaI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP\Documents\Visual Studio 2013\Projects\NominaI\NominaI\obj\Debug\NominaI.Menu.resources
