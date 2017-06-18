@@ -64,9 +64,10 @@
             // txtUser
             // 
             this.txtUser.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUser.Location = new System.Drawing.Point(136, 44);
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(136, 37);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(284, 20);
+            this.txtUser.Size = new System.Drawing.Size(284, 31);
             this.txtUser.TabIndex = 3;
             this.txtUser.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -76,7 +77,7 @@
             this.panel1.Controls.Add(this.txtUser);
             this.panel1.Controls.Add(this.lblUser);
             this.panel1.Controls.Add(this.lblPassword);
-            this.panel1.Location = new System.Drawing.Point(28, 37);
+            this.panel1.Location = new System.Drawing.Point(12, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 147);
             this.panel1.TabIndex = 4;
@@ -84,10 +85,11 @@
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPassword.Location = new System.Drawing.Point(136, 100);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(136, 91);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(284, 20);
+            this.txtPassword.Size = new System.Drawing.Size(284, 31);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -95,7 +97,7 @@
             // 
             this.panel2.Controls.Add(this.btnSuccess);
             this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Location = new System.Drawing.Point(28, 252);
+            this.panel2.Location = new System.Drawing.Point(12, 193);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(436, 69);
             this.panel2.TabIndex = 5;
@@ -126,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 333);
+            this.ClientSize = new System.Drawing.Size(468, 274);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Login";

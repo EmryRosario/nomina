@@ -17,6 +17,7 @@ namespace NominaI
         SqlConnection con;
         SqlCommand command;
         String Id_usuario;
+      
         public Menu(String Id_usuario)
         {
             this.Id_usuario = Id_usuario;
@@ -45,19 +46,51 @@ namespace NominaI
         {
             String query = "SELECT menu.Id_menu, menu.descripcion, menu.nivel, accesos.menu_padre ";
             query += "FROM menu INNER JOIN accesos ON accesos.Id_menu=menu.Id_menu ";
-            query += "INNER JOIN Usuarios ON Usuarios.Id_usuario = menu.Id_menu WHERE menu.nivel=1 AND accesos.Id_usuario=" +Id_usuario+ " ORDER BY menu.Id_menu";
+            query += "INNER JOIN Usuarios ON Usuarios.Id_usuario = accesos.Id_usuario WHERE menu.nivel=1 AND accesos.Id_usuario=" +Id_usuario+ " ORDER BY menu.Id_menu";
             command = new SqlCommand(query, con);
             SqlDataReader reader = command.ExecuteReader();
+            
+            List<String> MenuId = new List<String>();
+            List<String> MenuDescripcion = new List<String>();
 
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    ToolStripMenuItem mItem;
-                    mItem = new System.Windows.Forms.ToolStripMenuItem();
-                    mItem.Text = Convert.ToString(reader.GetValue(1));
-                    menuStrip1.Items.Add(mItem);
+                    MenuId.Add(Convert.ToString(reader.GetValue(0)));
+                    MenuDescripcion.Add(Convert.ToString(reader.GetValue(1)));
                 }
+                String[] MenuIdArreglo = MenuId.ToArray();
+                String[] MenuDescripcionArreglo = MenuDescripcion.ToArray();
+                reader.Close();
+                for (int i = 0; i < MenuDescripcionArreglo.Length; i++)
+                {
+                    ToolStripMenuItem mItem;
+                    mItem = new ToolStripMenuItem();
+                    mItem.Text = MenuDescripcionArreglo[i];
+
+                     menuStrip1.Items.Add(mItem);
+
+                     query = "SELECT menu.Id_menu, menu.descripcion, menu.nivel, accesos.menu_padre ";
+                     query += "FROM menu INNER JOIN accesos ON accesos.Id_menu=menu.Id_menu ";
+                     query += "INNER JOIN Usuarios ON Usuarios.Id_usuario = accesos.Id_usuario WHERE menu.nivel=2 AND accesos.Id_usuario=" + Id_usuario;
+                     query += "AND accesos.menu_padre=" + MenuIdArreglo[i] + " ORDER BY menu.Id_menu";
+                     SqlCommand submenuCommand = new SqlCommand(query, con);
+                     SqlDataReader submenuReader = submenuCommand.ExecuteReader();
+
+                     if (submenuReader.HasRows)
+                     {
+                     while (submenuReader.Read())
+                     {
+                       ToolStripMenuItem SubOpcion;
+                       SubOpcion = new ToolStripMenuItem();
+                       SubOpcion.Text = Convert.ToString(submenuReader.GetValue(1));
+                       mItem.DropDownItems.Add(SubOpcion);
+
+                     }
+                    }
+                }        
+              
             }
             else
             {
@@ -65,10 +98,7 @@ namespace NominaI
             }
         }
 
-        private void holaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 
      
