@@ -21,11 +21,14 @@ namespace NominaI
 
         public Login()
         {
-            try{
+            try
+            {
                 con = new SqlConnection("Data Source=DESKTOP-9KK6HN4\\SQLEXPRESS;Initial Catalog=nomina;Integrated Security=True");
                 con.Open();
 
-            } catch(Exception) {
+            }
+            catch (Exception)
+            {
             }
             InitializeComponent();
         }
@@ -59,20 +62,20 @@ namespace NominaI
                 while (reader.Read())
                 {
                     Id_usuario = Convert.ToString(reader.GetValue(1));
-                    
+
                 }
                 Menu menu = new Menu(Id_usuario);
                 menu.Show();
                 con.Close();
-                this.Hide(); 
+                this.Hide();
             }
             else
             {
                 reader.Close();
                 MessageBox.Show("Usuario y/o contraseña incorrecto");
             }
-           
+
         }
-       
+
     }
 }

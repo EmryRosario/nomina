@@ -26,3 +26,4 @@ C:\Users\HP\Documents\Visual Studio 2013\Projects\propietaria-I\nomina\NominaI\o
 C:\Users\HP\Documents\Visual Studio 2013\Projects\propietaria-I\nomina\NominaI\obj\Debug\NominaI.Menu.resources
 C:\Users\HP\Documents\Visual Studio 2013\Projects\propietaria-I\nomina\NominaI\obj\Debug\NominaI.Properties.Resources.resources
 C:\Users\HP\Documents\Visual Studio 2013\Projects\propietaria-I\nomina\NominaI\obj\Debug\NominaI.csproj.GenerateResource.Cache
+C:\Users\HP\Documents\Visual Studio 2013\Projects\propietaria-I\nomina\NominaI\obj\Debug\NominaI.CrearDepartamento.resources

@@ -52,6 +52,7 @@ namespace NominaI
             
             List<String> MenuId = new List<String>();
             List<String> MenuDescripcion = new List<String>();
+            Funcionalidades Func = new Funcionalidades();
 
             if (reader.HasRows)
             {
@@ -63,6 +64,7 @@ namespace NominaI
                 String[] MenuIdArreglo = MenuId.ToArray();
                 String[] MenuDescripcionArreglo = MenuDescripcion.ToArray();
                 reader.Close();
+                SqlDataReader submenuReader;
                 for (int i = 0; i < MenuDescripcionArreglo.Length; i++)
                 {
                     ToolStripMenuItem mItem;
@@ -76,7 +78,7 @@ namespace NominaI
                      query += "INNER JOIN Usuarios ON Usuarios.Id_usuario = accesos.Id_usuario WHERE menu.nivel=2 AND accesos.Id_usuario=" + Id_usuario;
                      query += "AND accesos.menu_padre=" + MenuIdArreglo[i] + " ORDER BY menu.Id_menu";
                      SqlCommand submenuCommand = new SqlCommand(query, con);
-                     SqlDataReader submenuReader = submenuCommand.ExecuteReader();
+                     submenuReader = submenuCommand.ExecuteReader();
 
                      if (submenuReader.HasRows)
                      {
@@ -87,8 +89,19 @@ namespace NominaI
                        SubOpcion.Text = Convert.ToString(submenuReader.GetValue(1));
                        mItem.DropDownItems.Add(SubOpcion);
 
+                       switch (Convert.ToInt32(submenuReader.GetValue(0)))
+                       {
+                           case 10:
+                               SubOpcion.Click += new System.EventHandler(Func.crearDepartamento_Click);
+                               break;
+                           default:
+                               break;
+                       }
+                       
                      }
+                     submenuReader.Close(); 
                     }
+                    
                 }        
               
             }
@@ -97,7 +110,7 @@ namespace NominaI
                 MessageBox.Show("Este usuario no tiene ningun acceso habilitado.");
             }
         }
-
+       
        
     }
 
