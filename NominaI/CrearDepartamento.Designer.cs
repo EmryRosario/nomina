@@ -36,9 +36,9 @@
             this.txtUbicacionDepartamento = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCancelarDepartamento = new System.Windows.Forms.Button();
-            this.btnCrearDepartamento = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCrearDepartamento = new System.Windows.Forms.Button();
+            this.btnCancelarDepartamento = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.txtDescripcionDepartamento);
             this.panel1.Controls.Add(this.txtUbicacionDepartamento);
             this.panel1.Controls.Add(this.lblDepartamentoDescripcion);
@@ -103,6 +104,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(495, 131);
             this.panel1.TabIndex = 5;
+            this.panel1.UseWaitCursor = true;
             // 
             // panel2
             // 
@@ -111,8 +113,28 @@
             this.panel2.Controls.Add(this.btnCancelarDepartamento);
             this.panel2.Location = new System.Drawing.Point(17, 223);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(495, 81);
+            this.panel2.Size = new System.Drawing.Size(495, 89);
             this.panel2.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.Location = new System.Drawing.Point(41, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 2;
+            // 
+            // btnCrearDepartamento
+            // 
+            this.btnCrearDepartamento.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCrearDepartamento.BackgroundImage")));
+            this.btnCrearDepartamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCrearDepartamento.Location = new System.Drawing.Point(310, 11);
+            this.btnCrearDepartamento.Name = "btnCrearDepartamento";
+            this.btnCrearDepartamento.Size = new System.Drawing.Size(87, 67);
+            this.btnCrearDepartamento.TabIndex = 1;
+            this.btnCrearDepartamento.UseVisualStyleBackColor = true;
+            this.btnCrearDepartamento.Click += new System.EventHandler(this.btnCrearDepartamento_Click);
             // 
             // btnCancelarDepartamento
             // 
@@ -126,26 +148,6 @@
             this.btnCancelarDepartamento.UseVisualStyleBackColor = true;
             this.btnCancelarDepartamento.Click += new System.EventHandler(this.btnCancelarDepartamento_Click);
             // 
-            // btnCrearDepartamento
-            // 
-            this.btnCrearDepartamento.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCrearDepartamento.BackgroundImage")));
-            this.btnCrearDepartamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCrearDepartamento.Location = new System.Drawing.Point(310, 11);
-            this.btnCrearDepartamento.Name = "btnCrearDepartamento";
-            this.btnCrearDepartamento.Size = new System.Drawing.Size(87, 67);
-            this.btnCrearDepartamento.TabIndex = 1;
-            this.btnCrearDepartamento.UseVisualStyleBackColor = true;
-            this.btnCrearDepartamento.Click += new System.EventHandler(this.btnCrearDepartamento_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(41, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 2;
-            // 
             // CrearDepartamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +157,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNuevoDepartamento);
             this.Name = "CrearDepartamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Departamento";
             this.Load += new System.EventHandler(this.CrearDepartamento_Load);
             this.panel1.ResumeLayout(false);

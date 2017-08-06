@@ -53,7 +53,7 @@ namespace NominaI
                 String descripcion = txtDescripcionDepartamento.Text;
                 String ubicacion = txtUbicacionDepartamento.Text;
 
-                con = new SqlConnection("Data Source=DESKTOP-9KK6HN4\\SQLEXPRESS;Initial Catalog=nomina;Integrated Security=True");
+                con = new SqlConnection(Connection.connectionString);
                 con.Open();
                 String query = "INSERT INTO Departamentos (Nombre, ubicacion_fisica) VALUES";
                 query += "('" + descripcion + "','" + ubicacion + "')";

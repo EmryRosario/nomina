@@ -52,8 +52,9 @@ namespace NominaI
         {
             String user = txtUser.Text;
             String contrasena = txtPassword.Text;
-            String query = "SELECT usuario, Id_usuario FROM Usuarios WHERE usuario='";
+            String query = "SELECT Usuarios.usuario, Empleados.Id_puesto  FROM Usuarios INNER JOIN Empleados ON Empleados.Id_empleado = Usuarios.Id_empleado WHERE usuario='";
             query += user + "' AND contrasena='" + contrasena + "'";
+
             command = new SqlCommand(query, con);
             reader = command.ExecuteReader();
 
@@ -74,6 +75,11 @@ namespace NominaI
                 reader.Close();
                 MessageBox.Show("Usuario y/o contraseña incorrecto");
             }
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
 
         }
 

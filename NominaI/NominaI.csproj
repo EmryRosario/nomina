@@ -52,11 +52,97 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.cs" />
     <Compile Include="CrearDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CrearDepartamento.Designer.cs">
       <DependentUpon>CrearDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Combo.cs" />
+    <Compile Include="FrmAsignarNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAsignarNomina.Designer.cs">
+      <DependentUpon>FrmAsignarNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearEmpleado.Designer.cs">
+      <DependentUpon>FrmCrearEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearNomina.Designer.cs">
+      <DependentUpon>FrmCrearNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarEmpleado.Designer.cs">
+      <DependentUpon>FrmEliminarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminarNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarNomina.Designer.cs">
+      <DependentUpon>FrmEliminarNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminarPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarPuesto.Designer.cs">
+      <DependentUpon>FrmEliminarPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGestionarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionarEmpleado.Designer.cs">
+      <DependentUpon>FrmGestionarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGestionarNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionarNomina.Designer.cs">
+      <DependentUpon>FrmGestionarNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModificarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificarEmpleado.Designer.cs">
+      <DependentUpon>FrmModificarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModificarPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificarPuesto.Designer.cs">
+      <DependentUpon>FrmModificarPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearPuesto.Designer.cs">
+      <DependentUpon>FrmCrearPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGestionarPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionarPuesto.Designer.cs">
+      <DependentUpon>FrmGestionarPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarDepartamento.Designer.cs">
+      <DependentUpon>FrmEditarDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarDepartamento.Designer.cs">
+      <DependentUpon>FrmEliminarDepartamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionalidades.cs" />
     <Compile Include="Login.cs">
@@ -71,10 +157,63 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="nominaDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nominaDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ConsultarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarDepartamento.Designer.cs">
+      <DependentUpon>ConsultarDepartamento.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CrearDepartamento.resx">
       <DependentUpon>CrearDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAsignarNomina.resx">
+      <DependentUpon>FrmAsignarNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearEmpleado.resx">
+      <DependentUpon>FrmCrearEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearNomina.resx">
+      <DependentUpon>FrmCrearNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarDepartamento.resx">
+      <DependentUpon>FrmEditarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearPuesto.resx">
+      <DependentUpon>FrmCrearPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarDepartamento.resx">
+      <DependentUpon>FrmEliminarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarEmpleado.resx">
+      <DependentUpon>FrmEliminarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarNomina.resx">
+      <DependentUpon>FrmEliminarNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarPuesto.resx">
+      <DependentUpon>FrmEliminarPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionarEmpleado.resx">
+      <DependentUpon>FrmGestionarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionarNomina.resx">
+      <DependentUpon>FrmGestionarNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionarPuesto.resx">
+      <DependentUpon>FrmGestionarPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificarEmpleado.resx">
+      <DependentUpon>FrmModificarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificarPuesto.resx">
+      <DependentUpon>FrmModificarPuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -91,6 +230,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConsultarDepartamento.resx">
+      <DependentUpon>ConsultarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="nominaDBDataSet.xsc">
+      <DependentUpon>nominaDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="nominaDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nominaDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nominaDBDataSet.xss">
+      <DependentUpon>nominaDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

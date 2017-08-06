@@ -23,7 +23,7 @@ namespace NominaI
             this.Id_usuario = Id_usuario;
             try
             {
-                con = new SqlConnection("Data Source=DESKTOP-9KK6HN4\\SQLEXPRESS;Initial Catalog=nomina;Integrated Security=True");
+                con = new SqlConnection(Connection.connectionString);
                 con.Open();
             }
             catch (Exception)
@@ -46,7 +46,7 @@ namespace NominaI
         {
             String query = "SELECT menu.Id_menu, menu.descripcion, menu.nivel, accesos.menu_padre ";
             query += "FROM menu INNER JOIN accesos ON accesos.Id_menu=menu.Id_menu ";
-            query += "INNER JOIN Usuarios ON Usuarios.Id_usuario = accesos.Id_usuario WHERE menu.nivel=1 AND accesos.Id_usuario=" +Id_usuario+ " ORDER BY menu.Id_menu";
+            query += " WHERE menu.nivel=1 AND accesos.Id_usuario=" +Id_usuario+ " ORDER BY menu.Id_menu";
             command = new SqlCommand(query, con);
             SqlDataReader reader = command.ExecuteReader();
             
@@ -94,7 +94,22 @@ namespace NominaI
                            case 10:
                                SubOpcion.Click += new System.EventHandler(Func.crearDepartamento_Click);
                                break;
+                           case 11:
+                               SubOpcion.Click += new System.EventHandler(Func.consultarDepartamento_Click);
+                               break;
                            default:
+                               break;
+                           case 13:
+                               SubOpcion.Click += new System.EventHandler(Func.gestionarPuesto_Click);
+                               break;
+                           case 15:
+                               SubOpcion.Click += new System.EventHandler(Func.gestionarEmpleado_Click);
+                               break;
+                           case 17:
+                               SubOpcion.Click += new System.EventHandler(Func.gestionarNomina_Click);
+                               break;
+                           case 18:
+                               SubOpcion.Click += new System.EventHandler(Func.asignarNomina_CLick);
                                break;
                        }
                        
